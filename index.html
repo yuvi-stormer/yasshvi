@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown to Yashvi's Birthday</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Countdown Screen -->
+    <div id="countdown-screen">
+        <h1>Countdown to Yashvi's Birthday!</h1>
+        <div class="countdown">
+            <div class="time-box">
+                <span id="days">00</span>
+                <div class="time-label">Days</div>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <div class="time-label">Hours</div>
+            </div>
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <div class="time-label">Minutes</div>
+            </div>
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <div class="time-label">Seconds</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Birthday Screen -->
+    <div id="birthday-screen" style="display: none;">
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <h1>Happy Birthday Yashvi!</h1>
+        <h2>You are 9! 🎉</h2>
+        <audio id="voice-recording" preload="auto">
+            <source src="happy-birthday.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="birthday-bgm" preload="auto" loop>
+            <source src="birthday-bgm.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Audio Element for Ticking -->
+    <audio id="ticking-sound" preload="auto">
+        <source src="ticking.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+#countdown-screen, #birthday-screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Countdown Screen Styles */
+#countdown-screen {
+    background-color: #cbacc7; /* Slightly darker shade */
+    color: #213153;
+}
+
+h1 {
+    font-size: 80px;
+    -webkit-text-stroke: 2px black;
+    text-shadow: 2px 2px 5px #000000;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 50px;
+    color: #ffbf3f;
+    margin: 10px 0;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.time-box {
+    background-color: #2e874b;
+    border-radius: 10px;
+    width: 100px;
+    height: 120px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.time-label {
+    font-size: 18px;
+    color: #404040;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #213153;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #17213a;
+}
+
+/* Birthday Screen Styles */
+#birthday-screen {
+    background-color: #87CEEB; /* Sky blue background */
+    position: relative; /* For clouds animation */
+    overflow: hidden; /* Prevent overflow of clouds */
+    color: #ffde59; /* Primary text color */
+}
+
+#birthday-screen h1 {
+    font-family: 'Bungee Shade', cursive;
+    color: #ffde59;
+    font-size: 60px;
+    text-shadow: 2px 2px 5px #000000;
+    animation: bounce 2s infinite;
+    margin: 20px 0;
+}
+
+#birthday-screen h2 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #38b6ff;
+    font-size: 40px;
+    text-shadow: 1px 1px 3px #000000;
+    animation: shimmer 3s infinite;
+    margin: 10px 0;
+}
+
+/* Cloud Animations */
+.cloud {
+    position: absolute;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0.8;
+    animation: float 20s linear infinite;
+}
+
+.cloud:nth-child(1) {
+    width: 200px;
+    height: 120px;
+    top: 10%;
+    left: -20%;
+    animation-duration: 25s;
+}
+
+.cloud:nth-child(2) {
+    width: 250px;
+    height: 150px;
+    top: 40%;
+    left: -30%;
+    animation-duration: 20s;
+}
+
+.cloud:nth-child(3) {
+    width: 180px;
+    height: 110px;
+    top: 70%;
+    left: -15%;
+    animation-duration: 30s;
+}
+
+@keyframes float {
+    from {
+        transform: translateX(-30%);
+    }
+    to {
+        transform: translateX(130%);
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        color: #38b6ff;
+    }
+    50% {
+        color: #ffde59;
+    }
+    100% {
+        color: #38b6ff;
+    }
+}
